@@ -90,6 +90,17 @@ footer img {
     width: 3em;
 }
 
+.container-light {
+    position: relative;
+    width: 100vw;
+}
+
+.light-item {
+    display: block;
+    width: 100vw;
+    padding: 1em;
+}
+
 @media only screen and (max-width: 600px)  {
     header .info {
         margin-top: 1.4em;
