@@ -33,7 +33,7 @@ setTimeout(()=> {
 </div>
 <div class="card-buttons">
     <a href="https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}" class="btn-full"><button class="btn btn-full btn-primary">CONNECT</button></a>
-    <button onclick="copyToClipboard('https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}')" class="btn btn-full">Copy to clipboard</button>
+    <button id="btn-${i}" onclick="copyToClipboard('https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}', ${i})" class="btn btn-full">Copy to clipboard</button>
 </div>
 </div>
         `;
@@ -51,13 +51,21 @@ function getFlagEmoji(countryCode) {
     return String.fromCodePoint(...codePoints);
 }
 
-function copyToClipboard(text) {
+function copyToClipboard(text, id) {
+    btn = document.getElementById(`btn-${id}`)
+
     navigator.clipboard.writeText(text).then(() => {
-        window.alert("Proxy copied to clipboard.")
         console.log('Proxy copied to clipboard.');
         /* Resolved - text copied to clipboard successfully */
+        btn.innerText = "COPIED!";
       },() => {
         console.error('Failed to cop the proxy.');
         /* Rejected - text failed to copy to the clipboard */
+        btn.innerText = "FAILED!";
       });
+
+
+      setTimeout(()=> {
+        btn.innerText = "Copy to clipboard"
+      }, 5000)
   }
