@@ -10,10 +10,12 @@
 /* Components */
 @import url('components/card.css');
 @import url('components/button.css');
+@import url('components/notification.css');
 
 /* Variables */
 :root {
     --color-haeder-background: #f6f7fe;
+    --color-notification-background: #e1e3ef;
     --color-haeder-background-small: #f6f7fe55;
     --color-haeder-shadow: #292c4847;
     --color-main-background: #e8ecfc;
