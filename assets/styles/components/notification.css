@@ -1,0 +1,28 @@
+.notification {
+    background-color: var(--color-notification-background);
+    padding: 1em 3em;
+    position: relative;
+    top: -2em;
+
+    animation-name: intro;
+    animation-duration: 2500ms;
+    animation-timing-function: ease;
+}
+
+.notification a:link {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.notification a:visited {
+    color: var(--color-primary);
+}
+
+@keyframes intro {
+    0% {
+        top: -100em;
+    }
+
+    100% {
+        top: -2em;
+    }
+}
