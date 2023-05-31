@@ -1,0 +1,119 @@
+/*
+* Telegram Proxies UI
+* Mohammad Javad Rakhshani
+* May-June, 2023
+*/
+
+/* Font config */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Components */
+@import url('components/card.css');
+@import url('components/button.css');
+
+/* Variables */
+:root {
+    --color-haeder-background: #f6f7fe;
+    --color-haeder-background-small: #f6f7fe55;
+    --color-haeder-shadow: #292c4847;
+    --color-main-background: #e8ecfc;
+    --color-footer-background: #d1d7ff;
+    --color-card-background: #F1F4FF;
+    --color-card-border: #cacfd9;
+    --color-card-border-hover: #63676e;
+    --color-primary: #2954ff;
+    --color-primary-pressed: #1934a2;
+    --color-secondary: #d3dcfb;
+    --color-secondary-pressed: #484c5a;
+    --color-main-color: #262729;
+    --color-onprimary-color: #f1f1f1;
+    --font-main: "Open Sans";
+    --blur-haeder-background-small: 15px;
+}
+
+/* Basic Document Config */
+* {
+    font-family: var(--font-main), sans-serif, system-ui, -apple-system;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    color: var(--color-main-color);
+    background-color: var(--color-main-background);
+}
+
+
+header {
+    background-color: var(--color-haeder-background);
+}
+
+header {
+    position: sticky;
+    padding: 0 2em;
+    top: 0;
+    z-index: 10; /* Highest z-index */
+    user-select: none;
+    display: flex;
+    margin-bottom: 2em;
+    box-shadow: 0 0 15px -10px var(--color-haeder-shadow);
+}
+
+header.small {
+    background-color: var(--color-haeder-background-small);
+    backdrop-filter: blur(var(--blur-haeder-background-small));
+    font-size: small;
+    display: flex;
+}
+
+header .logo img {
+    width: 4em;
+}
+header .logo {
+    margin: 1em;
+}
+header .info {
+    margin-top: .65em;
+}
+
+footer {
+    margin-top: 1em;
+    padding: 1.5em;
+    background-color: var(--color-footer-background);
+    text-align: center;
+}
+footer img {
+    width: 3em;
+}
+
+@media only screen and (max-width: 600px)  {
+    header .info {
+        margin-top: 1.4em;
+        font-size: smaller;
+    }
+    header {
+        font-size: smaller;
+    }
+
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .card-info {
+        margin: 1em 0;
+    }
+    .card .card-buttons {
+        text-align: center;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        margin: 2em 0 -1em;
+    }
+    .card .card-buttons a {
+        margin-right: 0.35em;
+    }
+}
