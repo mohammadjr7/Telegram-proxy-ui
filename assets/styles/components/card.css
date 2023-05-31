@@ -33,6 +33,7 @@
 
 .card .card-buttons a {
     position: relative;
+    margin-right: 0.35em;
 }
 
 .card .card-info {
@@ -69,6 +70,9 @@
     opacity: 1;
     font-size: 1.2em;
 }
+    .card .card-buttons a {
+        margin-right: 0.35em;
+    }
 
 @keyframes loading {
     0% {
