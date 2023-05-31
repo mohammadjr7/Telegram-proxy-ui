@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="assets/styles/main.css">
 </head>
 <body>
+    <noscript> This app needs JavaScript to work... </noscript>
     <header id="header" class="small">
         <div class="logo">
             <img src="assets/favicons/icon.png" alt="" draggable="false">
@@ -55,102 +56,82 @@
     
     <main id="container">
         
-    <div class="card card-loading">
+    <div class="card">
         <div class="card-info">
-            <div class="card-emoji">
-                <span id="country-emoji">💙</span>
+            <div class="card-emoji cube-loading">
+                <span id="country-emoji"></span>
             </div>
+
             <div class="card-desc">
-                <div class="country">
-                    <span>country: </span>
-                    <span id="country-name">IRAN</span></div>
-                <div class="ping">
-                    <span>ping: </span>
-                    <span id="ping-count">250ms</span>
-                </div>
+                <div class="line-loading"></div>
+                <div class="line-loading-long"></div>
             </div>
         </div>
-        <div class="card-load">
-            <p style="opacity: 1;">Loading...</p>
-        </div>
+        
         <div class="card-buttons">
-            <button class="btn btn-full btn-primary">CONNECT</button>
-            <button class="btn btn-full">Copy to clipboard</button>
+            <div class="btn-loading-long"></div>
+            <div class="btn-loading-long"></div>
+        </div>
         </div>
     </div>
-    </div>
-    <div class="card card-loading">
+
+    <div class="card">
         <div class="card-info">
-            <div class="card-emoji">
-                <span id="country-emoji">💙</span>
+            <div class="card-emoji cube-loading">
+                <span id="country-emoji"></span>
             </div>
+
             <div class="card-desc">
-                <div class="country">
-                    <span>country: </span>
-                    <span id="country-name">IRAN</span></div>
-                <div class="ping">
-                    <span>ping: </span>
-                    <span id="ping-count">250ms</span>
-                </div>
+                <div class="line-loading"></div>
+                <div class="line-loading-long"></div>
             </div>
         </div>
-        <div class="card-load">
-            <p style="opacity: 1;">Loading...</p>
-        </div>
+        
         <div class="card-buttons">
-            <button class="btn btn-full btn-primary">CONNECT</button>
-            <button class="btn btn-full">Copy to clipboard</button>
+            <div class="btn-loading-long"></div>
+            <div class="btn-loading-long"></div>
+        </div>
         </div>
     </div>
-    </div>
-    <div class="card card-loading">
+
+    <div class="card">
         <div class="card-info">
-            <div class="card-emoji">
-                <span id="country-emoji">💙</span>
+            <div class="card-emoji cube-loading">
+                <span id="country-emoji"></span>
             </div>
+
             <div class="card-desc">
-                <div class="country">
-                    <span>country: </span>
-                    <span id="country-name">IRAN</span></div>
-                <div class="ping">
-                    <span>ping: </span>
-                    <span id="ping-count">250ms</span>
-                </div>
+                <div class="line-loading"></div>
+                <div class="line-loading-long"></div>
             </div>
         </div>
-        <div class="card-load">
-            <p style="opacity: 1;">Loading...</p>
-        </div>
+        
         <div class="card-buttons">
-            <button class="btn btn-full btn-primary">CONNECT</button>
-            <button class="btn btn-full">Copy to clipboard</button>
+            <div class="btn-loading-long"></div>
+            <div class="btn-loading-long"></div>
+        </div>
         </div>
     </div>
-    </div>
-    <div class="card card-loading">
+
+    <div class="card">
         <div class="card-info">
-            <div class="card-emoji">
-                <span id="country-emoji">💙</span>
+            <div class="card-emoji cube-loading">
+                <span id="country-emoji"></span>
             </div>
+
             <div class="card-desc">
-                <div class="country">
-                    <span>country: </span>
-                    <span id="country-name">IRAN</span></div>
-                <div class="ping">
-                    <span>ping: </span>
-                    <span id="ping-count">250ms</span>
-                </div>
+                <div class="line-loading"></div>
+                <div class="line-loading-long"></div>
             </div>
         </div>
-        <div class="card-load">
-            <p style="opacity: 1;">Loading...</p>
-        </div>
+        
         <div class="card-buttons">
-            <button class="btn btn-full btn-primary">CONNECT</button>
-            <button class="btn btn-full">Copy to clipboard</button>
+            <div class="btn-loading-long"></div>
+            <div class="btn-loading-long"></div>
+        </div>
         </div>
     </div>
-    </div>
+
     </main>
 
     <footer>
@@ -159,11 +140,35 @@
         <p>Mohammad Javad Rakhshani</p>
     </footer>
 
-    <script>
-        navigator.clipboard.writeText("Hello World")
-    </script>
+    <!-- Toast -->
+    <div class="toast-container container-full w-100 p-1 flex flex-center-x flex-center-y  toast-container-hide" id="toast-shadow-container">
+        <div class="container-sm" id="toast-container">                
+            <div class="flex flex-center-x flex-space-between-x toast" id="toast">
+            <span class="text" id="toast-message">Placeholder...</span>
+            <span class="btn btn-circle btn-small" id="btn-close-toast" onclick="closeToast()">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+                
+            </span>
+        </div>
+        </div>
+    </div>
 
+    <!-- Scripts -->
     <script src="assets/scripts/header.js"></script>
     <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/toast.js"></script>
 </body>
 </html>
