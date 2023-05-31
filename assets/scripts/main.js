@@ -32,8 +32,8 @@ setTimeout(()=> {
     </div>
 </div>
 <div class="card-buttons">
-    <a href="https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}secret=${proxies[i]['secret']}" class="btn-full"><button class="btn btn-full btn-primary">CONNECT</button></a>
-    <button onclick="copyToClipboard('https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}secret=${proxies[i]['secret']}')" class="btn btn-full">Copy to clipboard</button>
+    <a href="https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}" class="btn-full"><button class="btn btn-full btn-primary">CONNECT</button></a>
+    <button onclick="copyToClipboard('https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}')" class="btn btn-full">Copy to clipboard</button>
 </div>
 </div>
         `;
