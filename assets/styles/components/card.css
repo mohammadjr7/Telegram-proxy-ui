@@ -17,6 +17,13 @@
     border: 1px var(--color-card-border) solid;
 }
 
+.card-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 .card .card-info {
     display: flex;
     flex-direction: row;
@@ -59,10 +66,57 @@
     animation-name: loading;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
-.card-loading * {
-    opacity: 0;
+.line-loading {
+    display: inline-block;
+    width: 8em;
+    height: 1.5em;
+    border-radius: 1em;
+    margin: 0.5em;
+    background-color: rebeccapurple;
+    user-select: none;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.line-loading-long {
+    display: inline-block;
+    width: 12em;
+    height: 1.5em;
+    border-radius: 1em;
+    margin: 0.5em;
+    background-color: rebeccapurple;
+    user-select: none;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.btn-loading-long {
+    display: inline-block;
+    width: 12em;
+    height: 2em;
+    border-radius: 1em;
+    margin: 0.5em;
+    background-color: rebeccapurple;
+    user-select: none;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.cube-loading {
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    border-radius: 1em;
+    margin: 1em 1em 1em 0;
+    background-color: rebeccapurple;
+    user-select: none;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .card-load {
