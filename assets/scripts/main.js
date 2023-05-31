@@ -12,8 +12,16 @@ fetch(URL, {
    .then(response => response.json())
    .then(response => proxies = response);
 
+
 setTimeout(()=> {
-    for (let i = 0; i < 150; i++) {
+    proxies = proxies.sort((a, b) => {
+        if (a.ping < b.ping) {
+          return -1;
+        }
+      });
+
+
+    for (let i = 100; i < proxies.length / 4.5; i++) {
     
         let htmlSegment = `
 <div class="card">
