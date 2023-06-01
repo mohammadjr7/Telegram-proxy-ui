@@ -53,6 +53,7 @@ header {
 }
 
 header {
+    transition: all 500ms ease-in-out;
     position: sticky;
     padding: 0 2em;
     top: 0;
