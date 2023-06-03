@@ -42,3 +42,31 @@ function getFlagEmoji(countryCode) {
       .map(char =>  127397 + char.charCodeAt());
     return String.fromCodePoint(...codePoints);
 }
+
+
+function copyAll() {
+  let btn = document.getElementById("copy-all-btn")
+  let text = CONTAINER.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+      console.log('Proxy copied to clipboard.');
+      /* Resolved - text copied to clipboard successfully */
+      btn.innerText = "COPIED!";
+    },() => {
+      console.error('Failed to cop the proxy.');
+      /* Rejected - text failed to copy to the clipboard */
+      btn.innerText = "FAILED!";
+    });
+
+
+    setTimeout(()=> {
+      btn.innerText = "Copy to clipboard"
+    }, 5000)
+}
+
+
+function selectAll() {
+  var range = document.createRange();
+  range.selectNode(CONTAINER);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+}
