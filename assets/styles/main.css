@@ -71,6 +71,10 @@ header.small {
     display: flex;
 }
 
+header.hidden {
+    top: -15em;
+}
+
 header .logo img {
     width: 4em;
 }
