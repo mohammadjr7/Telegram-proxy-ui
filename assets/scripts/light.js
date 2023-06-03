@@ -47,7 +47,9 @@ function getFlagEmoji(countryCode) {
 function copyAll() {
   let btn = document.getElementById("copy-all-btn")
   let text = CONTAINER.innerText;
-  navigator.clipboard.writeText(text).then(() => {
+
+  if (text.length > 0) {
+    navigator.clipboard.writeText(text).then(() => {
       console.log('Proxy copied to clipboard.');
       /* Resolved - text copied to clipboard successfully */
       btn.innerText = "COPIED!";
@@ -56,6 +58,9 @@ function copyAll() {
       /* Rejected - text failed to copy to the clipboard */
       btn.innerText = "FAILED!";
     });
+  } else {
+    btn.innerText = "Nothing to copy!";
+  }
 
 
     setTimeout(()=> {
