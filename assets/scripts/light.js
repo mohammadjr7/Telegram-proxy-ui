@@ -23,7 +23,7 @@ setTimeout(()=> {
 
       counter = 0;
 
-    for (let i = 100; i < proxies.length / 4.5; i++) {
+    for (let i = 50; i < 120; i++) {
     
         let htmlSegment = `
         <a class="light-item" href="https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}"> ${getFlagEmoji(proxies[i]['country'])} https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}</a>

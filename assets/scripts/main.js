@@ -21,7 +21,7 @@ setTimeout(()=> {
       });
 
 
-    for (let i = 100; i < proxies.length / 4.5; i++) {
+    for (let i = 50; i < 120; i++) {
     
         let htmlSegment = `
 <div class="card">
