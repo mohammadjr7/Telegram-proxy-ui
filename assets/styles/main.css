@@ -14,6 +14,7 @@
 
 /* Variables */
 :root {
+    /* Light-mode colors */
     --color-haeder-background: #f6f7fe;
     --color-notification-background: #e1e3ef;
     --color-haeder-background-small: #f6f7fe55;
@@ -29,6 +30,25 @@
     --color-secondary-pressed: #484c5a;
     --color-main-color: #262729;
     --color-onprimary-color: #f1f1f1;
+
+    /* Drak-mode colors */
+    --color-haeder-background-dark: #454545;
+    --color-notification-background-dark: #2b2b2b;
+    --color-haeder-background-small-dark: #10101087;
+    --color-haeder-shadow-dark: #292c4847;
+    --color-main-background-dark: #242527;
+    --color-footer-background-dark: #313131;
+    --color-card-background-dark: #313131;
+    --color-card-border-dark: #434343;
+    --color-card-border-hover-dark: #63676e;
+    --color-primary-dark: #2954ff;
+    --color-primary-pressed-dark: #1934a2;
+    --color-secondary-dark: #3f4149;
+    --color-secondary-pressed-dark: #282a32;
+    --color-main-color-dark: #e0e5ef;
+    --color-onprimary-color-dark: #f1f1f1;
+
+    /* Site config */
     --font-main: "Open Sans";
     --blur-haeder-background-small: 15px;
 }
@@ -42,6 +62,7 @@
 }
 
 body {
+    transition: all 220ms ease-in-out;
     font-size: 16px;
     color: var(--color-main-color);
     background-color: var(--color-main-background);
@@ -50,6 +71,7 @@ body {
 
 header {
     background-color: var(--color-haeder-background);
+    color: var(--color-main-color);
 }
 
 header {
@@ -60,6 +82,8 @@ header {
     z-index: 10; /* Highest z-index */
     user-select: none;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 2em;
     box-shadow: 0 0 15px -10px var(--color-haeder-shadow);
 }
@@ -83,12 +107,15 @@ header .logo {
 }
 header .info {
     margin-top: .65em;
+    margin-right: 1em;
 }
 
 footer {
+    transition: all 220ms ease-in-out;
     margin-top: 1em;
     padding: 1.5em;
     background-color: var(--color-footer-background);
+    color: var(--color-main-color);
     text-align: center;
 }
 footer img {
@@ -105,6 +132,37 @@ footer img {
     width: 100vw;
     padding: 1em;
 }
+
+
+.body-dark {
+    color: var(--color-main-color-dark);
+    background-color: var(--color-main-background-dark);
+}
+
+.header-dark {
+    background-color: var(--color-haeder-background-dark);
+    color: var(--color-main-color-dark);
+}
+.header-dark.small {
+    background-color: var(--color-haeder-background-small-dark);
+    color: var(--color-main-color-dark);
+    backdrop-filter: blur(var(--blur-haeder-background-small));
+    font-size: small;
+    display: flex;
+}
+.header-btns {
+    display: flex;
+    align-items: center;
+}
+.site-identity {
+    display: flex;
+}
+
+.footer-dark {
+    background-color: var(--color-footer-background-dark);
+    color: var(--color-main-color-dark);
+}
+
 
 @media only screen and (max-width: 600px)  {
     header .info {

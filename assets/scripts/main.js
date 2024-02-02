@@ -2,6 +2,7 @@ const CONTAINER = document.getElementById("container");
 const URL = "https://raw.githubusercontent.com/hookzof/socks5_list/master/tg/mtproto.json"
 var proxies = "";
 var html = "";
+var theme = "light";
 
 
 fetch(URL, {
@@ -24,7 +25,7 @@ setTimeout(()=> {
     for (let i = 50; i < 120; i++) {
     
         let htmlSegment = `
-<div class="card">
+<div class="card" id="card">
 <div class="card-info">
     <div class="card-emoji">
         <span id="country-emoji">${getFlagEmoji(proxies[i]['country'])}</span>
@@ -41,7 +42,7 @@ setTimeout(()=> {
 </div>
 <div class="card-buttons">
     <a href="https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}" class="btn-full"><button class="btn btn-full btn-primary">CONNECT</button></a>
-    <button id="btn-${i}" onclick="copyToClipboard('https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}', ${i})" class="btn btn-full">Copy to clipboard</button>
+    <button id="btn-${i}"  onclick="copyToClipboard('https://t.me/proxy?server=${proxies[i]['host']}&port=${proxies[i]['port']}&secret=${proxies[i]['secret']}', ${i})" class="btn btn-full">Copy to clipboard</button>
 </div>
 </div>
         `;
@@ -77,3 +78,61 @@ function copyToClipboard(text, id) {
         btn.innerText = "Copy to clipboard"
       }, 5000)
   }
+
+function changeTheme() {
+    if (theme == "light") {
+        body = document.getElementById("body");
+        body.classList.add("body-dark");
+        
+        header = document.getElementById("header");
+        header.classList.add("header-dark");
+
+        notification = document.getElementById("notification");
+        notification.classList.add("notification-dark");
+
+        footer = document.getElementById("footer");
+        footer.classList.add("footer-dark");
+
+        cards = document.querySelectorAll("#card")
+        cards.forEach(element => {
+            element.classList.add("card-dark")
+        });
+
+        
+        btns = document.querySelectorAll(".btn")
+        btns.forEach(element => {
+            if (!element.classList.contains("btn-primary")) {
+                element.classList.add("btn-dark")
+            }
+        });
+
+        theme = "dark";
+    } else {
+        body = document.getElementById("body");
+        body.classList.remove("body-dark");
+
+        header = document.getElementById("header");
+        header.classList.remove("header-dark");
+        
+        notification = document.getElementById("notification");
+        notification.classList.remove("notification-dark");
+        
+        footer = document.getElementById("footer");
+        footer.classList.remove("footer-dark");
+
+        
+        cards = document.querySelectorAll("#card")
+        cards.forEach(element => {
+            element.classList.remove("card-dark")
+        });
+
+        btns = document.querySelectorAll(".btn")
+        btns.forEach(element => {
+            if (!element.classList.contains("btn-primary")) {
+                element.classList.remove("btn-dark")
+            }
+        });
+
+        theme = "light";
+    }
+}

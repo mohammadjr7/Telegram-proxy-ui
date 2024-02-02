@@ -2,6 +2,7 @@
     transition: background-color 150ms ease, border 150ms ease;
     font-weight: 600;
     cursor: pointer;
+    color: var(--color-main-color);
 
     width: auto;
     text-transform: uppercase;
@@ -30,6 +31,12 @@
     background-color: var(--color-primary-pressed); 
     border: 1px var(--color-primary) solid;
     color: var(--color-onprimary-color);
+}
+
+.btn-dark {
+    background-color: var(--color-secondary-dark);
+    border: 1px var(--color-secondary-dark) solid;
+    color: var(--color-main-color-dark);
 }
 
 .btn-full {

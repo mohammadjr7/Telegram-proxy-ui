@@ -17,6 +17,11 @@
     border: 1px var(--color-card-border) solid;
 }
 
+.card-dark {
+    background-color: var(--color-card-background-dark);
+    border: 1px var(--color-card-border-card) solid;
+}
+
 .card-desc {
     display: flex;
     flex-direction: column;

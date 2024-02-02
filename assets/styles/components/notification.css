@@ -9,6 +9,10 @@
     animation-timing-function: ease;
 }
 
+.notification-dark {
+    background-color: var(--color-notification-background-dark);
+}
+
 .notification a:link {
     text-decoration: none;
     color: var(--color-primary);
